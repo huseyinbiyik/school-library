@@ -6,8 +6,8 @@ class Person
     @parent_permission = parent_permission
   end
 
-  attr_accessor(:age, :name)
-  attr_reader(:id)
+  attr_accessor :age, :name
+  attr_reader :id
 
   private def is_of_age?
     if @age >= 18
