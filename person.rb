@@ -11,7 +11,7 @@ class Person
   end
 
   def correct_name
-    c_name = Nameable.new()
+    c_name = Nameable.new
     @name
   end
 
