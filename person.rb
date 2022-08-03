@@ -1,3 +1,4 @@
+require 'nameable'
 class Person
   attr_accessor :age, :name
   attr_reader :id
@@ -7,6 +8,11 @@ class Person
     @name = name
     @age = age
     @parent_permission = parent_permission
+  end
+
+  def correct_name
+    c_name = Nameable.new()
+    @name
   end
 
   def of_age?
