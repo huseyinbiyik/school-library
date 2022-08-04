@@ -1,4 +1,9 @@
+require_relative 'book'
 class App
+  def initialize
+    @books = []
+  end
+
   def menu
     puts 'Please choose an option by entering a number:'
     puts '1 - List all books'
@@ -10,12 +15,25 @@ class App
     puts '7 - Exit'
   end
 
-  def option_checker
-    answer = gets.chomp
+  def option_checker(answer)
+    case answer
+    when 1
+      list_books
+    else
+      puts 'Wrong option'
+    end
   end
 
   def run
     menu
-    option_checker
+    answer = gets.chomp.to_i
+    option_checker(answer)
+  end
+
+  def list_books
+    puts 'Listing all the books in the library:'
+    @books.each do |book|
+      puts "#{book.title} by #{book.author}"
+    end
   end
 end
