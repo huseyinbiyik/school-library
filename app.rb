@@ -10,6 +10,7 @@ class App
   end
 
   def menu
+    puts ''
     puts 'Please choose an option by entering a number:'
     puts '1 - List all books'
     puts '2 - List all people'
@@ -26,6 +27,8 @@ class App
       list_books
     when 3
       create_person
+    when 4
+      create_book
     else
       puts 'Wrong option'
     end
@@ -75,8 +78,7 @@ class App
 
     student = Student.new(nil, age, name, parent_permission: permission)
     @people.push(student)
-    puts 'A student created successfully'
-    puts ''
+    puts 'A student created successfully👨‍🎓👩‍🎓'
   end
 
   def create_teacher
@@ -98,7 +100,17 @@ class App
 
     teacher = Teacher.new(age, specialization, name, parent_permission: permission)
     @people.push(teacher)
-    puts 'A teacher created successfully'
-    puts ''
+    puts 'A teacher created successfully👩‍🏫👨‍🏫'
+  end
+
+  def create_book
+    print 'Title:'
+    title = gets.chomp
+    print 'Author:'
+    author = gets.chomp
+    book = Book.new(title, author)
+    @books.push(book)
+    puts 'A book created successfully📕'
+    run
   end
 end
