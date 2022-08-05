@@ -25,6 +25,8 @@ class App
     case answer
     when 1
       list_books
+    when 2
+      list_people
     when 3
       create_person
     when 4
@@ -43,8 +45,17 @@ class App
   def list_books
     puts 'Listing all the books in the library:'
     @books.each do |book|
-      puts "#{book.title} by #{book.author}"
+      puts "📕 Title: '#{book.title}', Author: '#{book.author}'"
     end
+    run
+  end
+
+  def list_people
+    puts 'Listing all people:'
+    @people.each do |person|
+      puts "[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    end
+    run
   end
 
   def create_person
@@ -65,7 +76,7 @@ class App
     print 'Age:'
     age = gets.chomp.to_i
     print 'Name:'
-    name = gets.chomp.to_i
+    name = gets.chomp
 
     print 'Has parent permission? [Y/N]'
     permission = gets.chomp.upcase
