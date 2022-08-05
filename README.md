@@ -18,7 +18,7 @@ To get a local copy up and running follow these simple example steps.
 3- Open the command prompt in this directory. <br>
 4- Write `git clone https://github.com/huseyinbiyik/school-library.git` <br>
 5- Go to the repository folder in your command prompt `cd school-library`. <br>
-6- Go to command line and run `ruby person.rb`  or you can just paste the code on IRB (Interactive Ruby)
+6- Go to command line and run `./main.rb`.
 
 To setup linters on your local environment, please follow these steps.
 
@@ -27,7 +27,7 @@ To setup linters on your local environment, please follow these steps.
 
 ### Prerequisites
 
-IRB(Interactive Ruby Shell), VSCode, WSL(for Windows OS), for linters RuboCop
+IDE(VSCode etc.), WSL(for Windows OS), for linters RuboCop
 
 ## Authors
 
