@@ -22,6 +22,7 @@ class App
     puts '7 - Exit 🚪'
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def option_checker(answer)
     case answer
     when 1
@@ -36,11 +37,14 @@ class App
       create_rental
     when 6
       list_rentals
+    when 7
+      puts 'Thank you for using this app!'
     else
       puts '⚠️ Wrong input!'
       run
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 
   def run
     menu
