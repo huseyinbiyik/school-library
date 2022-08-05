@@ -36,8 +36,6 @@ class App
       create_rental
     when 6
       list_rentals
-    when 7
-      puts 'Thank you for using this app!'
     else
       puts '⚠️ Wrong input!'
       run
@@ -81,9 +79,9 @@ class App
   end
 
   def create_student
-    print 'Age:'
+    print 'Age: '
     age = gets.chomp.to_i
-    print 'Name:'
+    print 'Name: '
     name = gets.chomp
 
     print 'Has parent permission? [Y/N]'
@@ -101,11 +99,11 @@ class App
   end
 
   def create_teacher
-    print 'Age:'
+    print 'Age: '
     age = gets.chomp.to_i
-    print 'Specialization:'
+    print 'Specialization: '
     specialization = gets.chomp
-    print 'Name:'
+    print 'Name: '
     name = gets.chomp
 
     print 'Has parent permission? [Y/N]'
@@ -123,9 +121,9 @@ class App
   end
 
   def create_book
-    print 'Title:'
+    print 'Title: '
     title = gets.chomp
-    print 'Author:'
+    print 'Author: '
     author = gets.chomp
     book = Book.new(title, author)
     @books.push(book)
@@ -139,7 +137,7 @@ class App
       puts "#{idx}) Title: '#{book.title}', Author: '#{book.author}'"
     end
     selected_id_book = gets.chomp.to_i
-    print 'Date:'
+    print 'Date: '
     date = gets.chomp
 
     puts 'Select a person from the following list by number (not ID)'
